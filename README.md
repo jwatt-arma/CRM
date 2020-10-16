@@ -6,3 +6,7 @@ Crew Resource Management in Arma 3 mod dedicated to improving the experience of 
 - Waypoint management
 - IR laser pointer
 - Helmet-mounted display
+
+Dependencies:
+- ACE3
+- CBA
