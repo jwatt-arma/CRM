@@ -1,5 +1,7 @@
 # Crew Resource Managment
 
+## Overview:
+
 Crew Resource Management in Arma 3 mod dedicated to improving the experience of operating multi-crew aircraft. This mod supports the following features:
 - Improved control handoff
 - Autopilot
@@ -7,6 +9,6 @@ Crew Resource Management in Arma 3 mod dedicated to improving the experience of 
 - IR laser pointer
 - Helmet-mounted display
 
-Dependencies:
+## Dependencies:
 - ACE3
 - CBA
