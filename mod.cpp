@@ -1,0 +1,12 @@
+name = "Crew Resource Management";
+picture = "crm.paa";
+actionName = "GitHub";
+action = "https://github.com/acemod/ACE3";
+description = "CRM - Version 1.0.0";
+logo = "crm.paa";
+logoOver = "crm.paa";
+tooltip = "CRM";
+tooltipOwned = "CRM";
+overview = "Collection of tweaks to improve coordination in multi-crew aicraft.";
+author = "Watt";
+overviewPicture = "crm.paa";
