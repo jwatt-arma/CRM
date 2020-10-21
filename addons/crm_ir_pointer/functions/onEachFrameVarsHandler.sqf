@@ -11,7 +11,7 @@ _isIrPointerOn = [_vehicle] call crm_ir_pointer_fnc_isIrPointerOn;
 if (not _isIrPointerOn) exitWith {};
 
 // Get the target position of pointer
-_turretIndex = [_vehicle] call crm_ir_pointer_fnc_getIrPointerTurretIndex;
+_turretIndex = [_vehicle] call crm_common_fnc_getCopilotTurretIndex;
 _targetPos = [_vehicle, _turretIndex] call crm_ir_pointer_fnc_getIrPointerTargetPosLocal;
 
 // Broadcast result

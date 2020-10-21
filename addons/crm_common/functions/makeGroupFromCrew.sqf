@@ -7,7 +7,7 @@ _group = createGroup [side _unit, true];
 // Figure out who pilot & copilot are
 _vehicle = vehicle _unit;
 _pilot = driver _vehicle;
-_copilot = [] call crm_common_fnc_getCopilot;
+_copilot = [_vehicle] call crm_common_fnc_getCopilot;
 _crew = [_pilot, _copilot];
 if (_all) then {
 	_crew = _crew + ([_vehicle] call crm_common_fnc_getCrewTurretUnits);

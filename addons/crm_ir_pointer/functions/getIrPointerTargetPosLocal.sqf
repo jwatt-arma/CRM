@@ -17,7 +17,7 @@ _intersections = lineIntersectsSurfaces  [_pos, _maxIntersectPos];
 _intersectionPos = ASLtoATL (_intersections select 0 select 0);
 
 // If there is no intersection then just return the point at max intersection distance
-if (isNil _intersectionPos) then {
+if (isNil {_intersectionPos}) then {
     _intersectionPos = ASLtoATL _maxIntersectPos;
 };
 

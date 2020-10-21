@@ -3,7 +3,7 @@ private ['_iteration', '_n_lines', '_radius', '_lineFormat', '_angle', '_angle',
 
 // Constants
 _n_lines = 20;
-_radius = 0.01;
+_radius = 0.1;
 _lineFormat = [1, 1, 1, 1];
 
 // Iterate over all the lines to draw
@@ -22,5 +22,5 @@ for "_iteration" from 1 to _n_lines do {
     _end set [2, _targetPos select 2];
 
     // Draw it
-    drawLine3d [_stard, _end, _lineFormat];
+    drawLine3d [_start, _end, _lineFormat];
 };

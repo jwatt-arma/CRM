@@ -8,10 +8,9 @@ _id = addMissionEventHandler ["Map", {
 }];
 
 _handlers pushBack _id;
-hint (str _handlers);
+
 // Add waypoint on click
 ["mapClickHandler", "onMapSingleClick", {
-	hint str (_this select 5);
 	[_this select 4, _this select 1] call crm_waypoints_fnc_addWaypoint;
 	["mapClickHandler", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 	{ removeMissionEventHandler ["Map", _x]; } forEach (_this select 5);

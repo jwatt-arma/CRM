@@ -19,9 +19,6 @@ class CfgFunctions {
       class getIrPointerTargetPosRemote {
         file = "crm_ir_pointer\functions\getIrPointerTargetPosRemote.sqf";
       };
-      class getIrPointerTurretIndex {
-        file = "crm_ir_pointer\functions\getIrPointerTurretIndex.sqf";
-      };
       class getIrPointerController {
         file = "crm_ir_pointer\functions\getIrPointerController.sqf";
       };
@@ -48,15 +45,6 @@ class CfgFunctions {
       };
       class toggleIrPointer {
         file = "crm_ir_pointer\functions\toggleIrPointer.sqf";
-      };
-      class getIrPointerEmitterWeaponName {
-        file = "crm_ir_pointer\functions\getIrPointerEmitterWeaponName.sqf";
-      };
-      class getIrPointerEmitterDir {
-        file = "crm_ir_pointer\scripts\getIrPointerEmitterDir.sqf";
-      };
-      class getIrPointerEmitterOffset {
-        file = "crm_ir_pointer\functions\getIrPointerEmitterOffset.sqf";
       };
       class postInit {
         file = "crm_ir_pointer\functions\onInit.sqf";

@@ -10,7 +10,7 @@ _currentValue = [_vehicle] call crm_ir_pointer_fnc_isIrPointerOn;
 
 // If we are toggling the laser on we need to update the target location
 if (_currentValue) then {
-	_turretIndex = [_vehicle] call crm_ir_pointer_fnc_getIrPointerTurretIndex;
+	_turretIndex = [_vehicle] call crm_common_fnc_getCopilotTurretIndex;
 	_targetPos = [_vehicle, _turretIndex] call crm_ir_pointer_fnc_getIrPointerTargetPos;
 	[_vehicle, _targetPos] call crm_ir_pointer_fnc_setIrPointerTargetPosVar;
 };

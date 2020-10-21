@@ -6,7 +6,7 @@ if (not _canSeeIr) exitWith {};
 // Draw IR pointer if it is on
 _pointerOn = [_vehicle] call crm_ir_pointer_fnc_isIrPointerOn;
 if (_pointerOn) then {
-	_turretIndex = [_vehicle] call crm_ir_pointer_fnc_getIrPointerTurretIndex;
+	_turretIndex = [_vehicle] call crm_common_fnc_getCopilotTurretIndex;
 	_emitterPos = [_vehicle] call crm_ir_pointer_fnc_getIrPointerEmitterPos;
 	_targetPos = [_vehicle, _turretIndex] call crm_ir_pointer_fnc_getIrPointerTargetPosRemote;
 	[_emitterPos, _targetPos] call crm_ir_pointer_fnc_drawIrPointer;

@@ -13,6 +13,15 @@ class CfgFunctions {
       class getCopilot {
         file = "crm_common\functions\getCopilot.sqf";
       };
+      class getCopilotTurret {
+        file = "crm_common\functions\getCopilotTurret.sqf";
+      };
+      class getCopilotTurretIndex {
+        file = "crm_common\functions\getCopilotTurretIndex.sqf";
+      };
+      class getCopilotTurretOpticsSelection {
+        file = "crm_common\functions\getCopilotTurretOpticsSelection.sqf";
+      };
       class getCrewTurretUnits {
         file = "crm_common\functions\getCrewTurretUnits.sqf";
       };
