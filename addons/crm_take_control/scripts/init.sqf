@@ -1,7 +1,7 @@
 if (hasInterface) then {
 	// Create keybind
 	[
-		"Take Controls","key_takeControls",
+		"CRM Take Control","key_takeControls",
 		"Take Control of Aircraft",
 		{ [] call crm_take_control_fnc_takeControls },
 		"",

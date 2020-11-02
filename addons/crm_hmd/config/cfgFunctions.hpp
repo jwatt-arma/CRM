@@ -8,7 +8,7 @@ class CfgFunctions {
         file = "crm_hmd\functions\setHmdOn.sqf";
       };
       class setHmdImperial {
-        file = "crm_hmd\functions\setHmdUnitsImperial.sqf";
+        file = "crm_hmd\functions\setHmdImperial.sqf";
       };
       class isHmdFull {
         file = "crm_hmd\functions\isHmdFull.sqf";
