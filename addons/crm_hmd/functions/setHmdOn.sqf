@@ -1,2 +1,4 @@
 params ['_vehicle', '_value'];
-_vehicle setUserMFDValue [49, _value];
+#include "defines.hpp"
+
+_vehicle setUserMFDValue [MFD_USER_ON, _value];

@@ -1,7 +1,7 @@
 // MFD Configs based on work by Kimi and used with permission
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
-class Kimi_HMD_RKT_C
+class Kimi_HMD_HAD_CPG
 {
     topLeft="HUD_top_left";
     topRight="HUD_top_right";
@@ -371,7 +371,7 @@ class Kimi_HMD_RKT_C
             angle=-50;
         };
     };
-    turret[]={0};
+    turret[]={};
     class Draw
     {
         color[]=
@@ -381,61 +381,287 @@ class Kimi_HMD_RKT_C
             "user5"
         };
         alpha="user6";
-        condition="on*user47";
-        class Rocket_I_LLW
+        condition="on*user47-user48";
+        class SpeedNumber_Imperial
         {
-            condition="rocket";
             type="group";
-            class RocketSight
+            condition="user49";
+            class Speed_Imperial
             {
-                type="line";
-                width=5.5;
-                points[]=
+                type="text";
+                align="right";
+                scale=1;
+                source="speed";
+                sourceScale=1.94384;
+                pos[]=
+                {
+                    {0.37,0.79000002},
+                    1
+                };
+                right[]=
+                {
+                    {0.41,0.79000002},
+                    1
+                };
+                down[]=
+                {
+                    {0.37,0.82999998},
+                    1
+                };
+            };
+        };
+        class SpeedNumber_Metric
+        {
+            type="group";
+            condition="1-user49";
+            class Speed_Metric
+            {
+                type="text";
+                align="right";
+                scale=1;
+                source="speed";
+                sourceScale=3.5999999;
+                pos[]=
+                {
+                    {0.37,0.79000002},
+                    1
+                };
+                right[]=
+                {
+                    {0.41,0.79000002},
+                    1
+                };
+                down[]=
+                {
+                    {0.37,0.82999998},
+                    1
+                };
+            };
+        };
+        class AltNumber_Imperial
+        {
+            type="group";
+            condition="user49";
+            class Alt_Imperial
+            {
+                type="text";
+                scale=1;
+                align="right";
+                source="altitudeAGL";
+                sourceScale=3.2808399;
+                sourceOffset=-6;
+                pos[]=
+                {
+                    {0.61000001,0.79000002},
+                    1
+                };
+                right[]=
+                {
+                    {0.64999998,0.79000002},
+                    1
+                };
+                down[]=
+                {
+                    {0.61000001,0.82999998},
+                    1
+                };
+            };
+        };
+        class AltNumber_Metric
+        {
+            type="group";
+            condition="1-user49";
+            class Alt_Metric
+            {
+                type="text";
+                scale=1;
+                align="right";
+                source="altitudeAGL";
+                sourceScale=1;
+                sourceOffset=-2;
+                pos[]=
+                {
+                    {0.61000001,0.79000002},
+                    1
+                };
+                right[]=
+                {
+                    {0.64999998,0.79000002},
+                    1
+                };
+                down[]=
+                {
+                    {0.61000001,0.82999998},
+                    1
+                };
+            };
+        };
+        class Static_HAD_BOX_CPG_Add
+        {
+            clipTL[]={0,1};
+            clipBR[]={1,0};
+            type="line";
+            width=2;
+            points[]=
+            {
+
                 {
 
                     {
-                        "CCIP_2_VIEW",
-                        1,
-                        {0.022,-0.029999999},
-                        1
+                        "0.5-0.075",
+                        "0.9-0.040"
                     },
+                    1
+                },
+
+                {
 
                     {
-                        "CCIP_2_VIEW",
-                        1,
-                        {-0.022,-0.029999999},
-                        1
+                        "0.5-0.075",
+                        "0.9-0.032"
                     },
-                    {},
+                    1
+                },
+                {},
+
+                {
 
                     {
-                        "CCIP_2_VIEW",
-                        1,
-                        {0,-0.029999999},
-                        1
+                        "0.5+0.075",
+                        "0.9-0.040"
                     },
+                    1
+                },
+
+                {
 
                     {
-                        "CCIP_2_VIEW",
-                        1,
-                        {0,0.029999999},
-                        1
+                        "0.5+0.075",
+                        "0.9-0.032"
                     },
-                    {},
+                    1
+                },
+                {},
+
+                {
 
                     {
-                        "CCIP_2_VIEW",
-                        1,
-                        {0.022,0.029999999},
-                        1
+                        "0.5-0.075",
+                        "0.9+0.040"
                     },
+                    1
+                },
+
+                {
 
                     {
-                        "CCIP_2_VIEW",
-                        1,
-                        {-0.022,0.029999999},
-                        1
-                    }
+                        "0.5-0.075",
+                        "0.9+0.032"
+                    },
+                    1
+                },
+                {},
+
+                {
+
+                    {
+                        "0.5+0.075",
+                        "0.9+0.040"
+                    },
+                    1
+                },
+
+                {
+
+                    {
+                        "0.5+0.075",
+                        "0.9+0.032"
+                    },
+                    1
+                }
+            };
+        };
+        class WeaponName
+        {
+            type="group";
+            condition="1-mgun";
+            class weaponN
+            {
+                type="text";
+                source="weapon";
+                sourceScale=1;
+                align="right";
+                scale=1;
+                pos[]=
+                {
+                    {0.61000001,0.86000001},
+                    1
+                };
+                right[]=
+                {
+                    {0.64999998,0.86000001},
+                    1
+                };
+                down[]=
+                {
+                    {0.61000001,0.89999998},
+                    1
+                };
+            };
+        };
+        class WeaponName_Gun
+        {
+            type="group";
+            condition="mgun";
+            class weaponG
+            {
+                type="text";
+                align="right";
+                source="static";
+                text="CGUN";
+                scale=1;
+                pos[]=
+                {
+                    {0.61000001,0.86000001},
+                    1
+                };
+                right[]=
+                {
+                    {0.64999998,0.86000001},
+                    1
+                };
+                down[]=
+                {
+                    {0.61000001,0.89999998},
+                    1
+                };
+            };
+        };
+        class AmmoCount
+        {
+            type="group";
+            condition="rocket+bomb+missile+mgun";
+            class AmmoC
+            {
+                type="text";
+                source="ammo";
+                sourceScale=1;
+                align="right";
+                scale=1;
+                pos[]=
+                {
+                    {0.61000001,0.88999999},
+                    1
+                };
+                right[]=
+                {
+                    {0.64999998,0.88999999},
+                    1
+                };
+                down[]=
+                {
+                    {0.61000001,0.93000001},
+                    1
                 };
             };
         };

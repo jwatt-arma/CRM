@@ -27,11 +27,11 @@ class CfgVehicles {
 			};
 		};
 		class MFD: MFD {
-		#include "pilot_hmd.hpp"
+			#include "pilot_hmd.hpp"
 		};
 		class UserActions: UserActions
 		{
-		#include "user_actions.hpp"
+			#include "user_actions.hpp"
 		};
 		class ACE_SelfActions: ACE_SelfActions {
 			class hmd_actions {
