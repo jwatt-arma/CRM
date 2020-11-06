@@ -8,5 +8,6 @@ class CfgPatches
 		requiredAddons[] = {"ace_main", "cba_main"};
 	};
 };
+//#include "macros\add_hmd_pilot.hpp"
 #include "config\cfgVehicles.hpp"
 #include "config\cfgFunctions.hpp"

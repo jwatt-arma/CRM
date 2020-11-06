@@ -2,7 +2,7 @@
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
 #include "\CRM\crm_hmd\functions\defines.hpp"
-class Kimi_HMD_RKT_P
+class Kimi_HMD_Weapons_Lynx_P
 {
     topLeft="HUD_top_left";
     topRight="HUD_top_right";
@@ -383,42 +383,38 @@ class Kimi_HMD_RKT_P
         };
         alpha="user6";
         condition="on*user47";
-        class Rocket_I_LLW
+        class Gun_Cross
         {
-            condition="rocket";
+            condition="mgun";
             type="group";
-            class RocketSight
+            class GUN_X
             {
                 type="line";
-                width=5.5;
+                width=7;
                 points[]=
                 {
                     
                     {
                         "CCIP_2_VIEW",
-                        1,
-                        {0.022,-0.029999999},
-                        1
-                    },
-                    
-                    {
-                        "CCIP_2_VIEW",
-                        1,
-                        {-0.022,-0.029999999},
-                        1
-                    },
-                    {},
-                    
-                    {
-                        "CCIP_2_VIEW",
-                        1,
                         {0,-0.029999999},
                         1
                     },
                     
                     {
                         "CCIP_2_VIEW",
-                        1,
+                        {0,-0.012},
+                        1
+                    },
+                    {},
+                    
+                    {
+                        "CCIP_2_VIEW",
+                        {0,0.012},
+                        1
+                    },
+                    
+                    {
+                        "CCIP_2_VIEW",
                         {0,0.029999999},
                         1
                     },
@@ -426,17 +422,89 @@ class Kimi_HMD_RKT_P
                     
                     {
                         "CCIP_2_VIEW",
-                        1,
-                        {0.022,0.029999999},
+                        {-0.029999999,0},
                         1
                     },
                     
                     {
                         "CCIP_2_VIEW",
-                        1,
-                        {-0.022,0.029999999},
+                        {-0.012,0},
+                        1
+                    },
+                    {},
+                    
+                    {
+                        "CCIP_2_VIEW",
+                        {0.012,0},
+                        1
+                    },
+                    
+                    {
+                        "CCIP_2_VIEW",
+                        {0.029999999,0},
                         1
                     }
+                };
+            };
+            class Distance
+            {
+                type="text";
+                source="ImpactDistance";
+                sourceScale=0.001;
+                sourcePrecision=1;
+                max=15;
+                align="center";
+                scale=1;
+                pos[]=
+                {
+                    "CCIP_2_VIEW",
+                    {-0.0020000001,0.035},
+                    1
+                };
+                right[]=
+                {
+                    "CCIP_2_VIEW",
+                    {0.028000001,0.035},
+                    1
+                };
+                down[]=
+                {
+                    "CCIP_2_VIEW",
+                    {-0.0020000001,0.064999998},
+                    1
+                };
+            };
+        };
+        class Rocket_I_LLW
+        {
+            condition="rocket";
+            type="group";
+            class Distance
+            {
+                type="text";
+                source="ImpactDistance";
+                sourceScale=0.001;
+                sourcePrecision=1;
+                max=15;
+                align="center";
+                scale=1;
+                pos[]=
+                {
+                    "CCIP_2_VIEW",
+                    {-0.0020000001,0.035},
+                    1
+                };
+                right[]=
+                {
+                    "CCIP_2_VIEW",
+                    {0.028000001,0.035},
+                    1
+                };
+                down[]=
+                {
+                    "CCIP_2_VIEW",
+                    {-0.0020000001,0.064999998},
+                    1
                 };
             };
         };

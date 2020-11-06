@@ -1,6 +1,7 @@
 // MFD Configs based on work by Kimi and used with permission
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
+#include "\CRM\crm_hmd\functions\defines.hpp"
 class Kimi_HMD_Weapons
 {
     topLeft="HUD_top_left";
@@ -391,9 +392,9 @@ class Kimi_HMD_Weapons
                 type="polygon";
                 points[]=
                 {
-
+                    
                     {
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -402,7 +403,7 @@ class Kimi_HMD_Weapons
                             {-0.0070000002,0.0099999998},
                             1
                         },
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -411,7 +412,7 @@ class Kimi_HMD_Weapons
                             {0,0},
                             1
                         },
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -428,9 +429,9 @@ class Kimi_HMD_Weapons
                 type="polygon";
                 points[]=
                 {
-
+                    
                     {
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -439,7 +440,7 @@ class Kimi_HMD_Weapons
                             {-0.0070000002,0.0099999998},
                             1
                         },
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -448,7 +449,7 @@ class Kimi_HMD_Weapons
                             {0.0070000002,0.0099999998},
                             1
                         },
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -457,7 +458,7 @@ class Kimi_HMD_Weapons
                             {0.0070000002,0.02},
                             1
                         },
-
+                        
                         {
                             "Turret_Tape_Bone",
                             1,
@@ -480,52 +481,52 @@ class Kimi_HMD_Weapons
                 width=9;
                 points[]=
                 {
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {0,-0.050000001},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {0,-0.015},
                         1
                     },
                     {},
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {0,0.015},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {0,0.050000001},
                         1
                     },
                     {},
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {-0.050000001,0},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {-0.015,0},
                         1
                     },
                     {},
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {0.015,0},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         {0.050000001,0},
@@ -537,132 +538,136 @@ class Kimi_HMD_Weapons
         class Gunner_AIM
         {
             type="group";
-            condition="1-mgun";
-            class CPG_X
+            condition="(1-mgun)*(2-(abs(cameraHeadingDiffY)<=3)-(abs(cameraHeadingDiffX)<=3))*(1-(abs(weaponHeading-HEADING)<=3))";
+            class CPG_X_Group
             {
-                type="line";
-                width=6;
-                points[]=
+                type="group";
+                class CPG_X
                 {
-
+                    type="line";
+                    width=6;
+                    points[]=
                     {
-                        "TurretAimToView",
-                        1,
-                        {0,-0.015},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,-0.029999999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,-0.032499999},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,-0.047499999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,0.015},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,0.029999999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,0.032499999},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0,0.047499999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {-0.015,0},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {-0.029999999,0},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {-0.032499999,0},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {-0.047499999,0},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0.015,0},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0.029999999,0},
-                        1
-                    },
-                    {},
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0.032499999,0},
-                        1
-                    },
-
-                    {
-                        "TurretAimToView",
-                        1,
-                        {0.047499999,0},
-                        1
-                    }
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,-0.015},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,-0.029999999},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,-0.032499999},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,-0.047499999},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,0.015},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,0.029999999},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,0.032499999},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0,0.047499999},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {-0.015,0},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {-0.029999999,0},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {-0.032499999,0},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {-0.047499999,0},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0.015,0},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0.029999999,0},
+                            1
+                        },
+                        {},
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0.032499999,0},
+                            1
+                        },
+                        
+                        {
+                            "TurretAimToView",
+                            1,
+                            {0.047499999,0},
+                            1
+                        }
+                    };
                 };
             };
         };
@@ -676,7 +681,7 @@ class Kimi_HMD_Weapons
                 width=2;
                 points[]=
                 {
-
+                    
                     {
                         "Target2View",
                         1,
@@ -685,7 +690,7 @@ class Kimi_HMD_Weapons
                         {0,-0.059999999},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -695,7 +700,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -704,7 +709,7 @@ class Kimi_HMD_Weapons
                         {0,-0.050000001},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -714,7 +719,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -723,7 +728,7 @@ class Kimi_HMD_Weapons
                         {0,-0.039999999},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -733,7 +738,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -742,7 +747,7 @@ class Kimi_HMD_Weapons
                         {0,-0.029999999},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -752,7 +757,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -761,7 +766,7 @@ class Kimi_HMD_Weapons
                         {0,-0.02},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -771,7 +776,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -780,7 +785,7 @@ class Kimi_HMD_Weapons
                         {0,-0.0099999998},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -790,7 +795,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -799,7 +804,7 @@ class Kimi_HMD_Weapons
                         {0,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -809,7 +814,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -818,7 +823,7 @@ class Kimi_HMD_Weapons
                         {0,0.059999999},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -828,7 +833,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -837,7 +842,7 @@ class Kimi_HMD_Weapons
                         {0,0.050000001},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -847,7 +852,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -856,7 +861,7 @@ class Kimi_HMD_Weapons
                         {0,0.039999999},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -866,7 +871,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -875,7 +880,7 @@ class Kimi_HMD_Weapons
                         {0,0.029999999},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -885,7 +890,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -894,7 +899,7 @@ class Kimi_HMD_Weapons
                         {0,0.02},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -904,7 +909,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -913,7 +918,7 @@ class Kimi_HMD_Weapons
                         {0,0.0099999998},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -923,7 +928,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -932,7 +937,7 @@ class Kimi_HMD_Weapons
                         {-0.059999999,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -942,7 +947,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -951,7 +956,7 @@ class Kimi_HMD_Weapons
                         {-0.050000001,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -961,7 +966,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -970,7 +975,7 @@ class Kimi_HMD_Weapons
                         {-0.039999999,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -980,7 +985,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -989,7 +994,7 @@ class Kimi_HMD_Weapons
                         {-0.029999999,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -999,7 +1004,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1008,7 +1013,7 @@ class Kimi_HMD_Weapons
                         {-0.02,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1018,7 +1023,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1027,7 +1032,7 @@ class Kimi_HMD_Weapons
                         {-0.0099999998,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1037,7 +1042,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1046,7 +1051,7 @@ class Kimi_HMD_Weapons
                         {0.059999999,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1056,7 +1061,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1065,7 +1070,7 @@ class Kimi_HMD_Weapons
                         {0.050000001,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1075,7 +1080,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1084,7 +1089,7 @@ class Kimi_HMD_Weapons
                         {0.039999999,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1094,7 +1099,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1103,7 +1108,7 @@ class Kimi_HMD_Weapons
                         {0.029999999,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1113,7 +1118,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1122,7 +1127,7 @@ class Kimi_HMD_Weapons
                         {0.02,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1132,7 +1137,7 @@ class Kimi_HMD_Weapons
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1141,7 +1146,7 @@ class Kimi_HMD_Weapons
                         {0.0099999998,0},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         1,
@@ -1163,1888 +1168,1889 @@ class Kimi_HMD_Weapons
                 width=2;
                 points[]=
                 {
-
+                    
                     {
                         "Target2View",
                         {-0.075000003,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.064999998,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.059999999,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.050000001,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.045000002,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.035,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.029999999,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.02,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.015,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.0049999999,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.075000003,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.064999998,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.059999999,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.050000001,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.045000002,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.035,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.029999999,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.02,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.015,-0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.0049999999,-0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.075000003,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.064999998,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.059999999,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.050000001,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.045000002,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.035,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.029999999,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.02,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {-0.015,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {-0.0049999999,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.075000003,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.064999998,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.059999999,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.050000001,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.045000002,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.035,0.075000003},
                         1
                     },
                     {},
-
+                    
                     {
                         "Target2View",
                         {0.029999999,0.075000003},
                         1
                     },
-
+                    
                     {
                         "Target2View",
                         {0.02,0.075000003},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.015,0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.0049999999,0.075000003},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.064999998},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.059999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.050000001},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.045000002},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.035},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.029999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.02},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.015},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.0049999999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.064999998},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.059999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.050000001},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.045000002},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.035},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.029999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.02},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.015},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.0049999999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.064999998},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.059999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.050000001},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.045000002},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.035},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.029999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.02},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.015},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.0049999999},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.064999998},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.059999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.050000001},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.045000002},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.035},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.029999999},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.02},
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.015},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.0049999999},
-                        1
-                    }
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.015,0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.0049999999,0.075000003},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.064999998},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.059999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.050000001},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.045000002},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.035},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.029999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.02},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.015},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.0049999999},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.064999998},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.059999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.050000001},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.045000002},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.035},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.029999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.02},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.015},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.0049999999},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.064999998},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.059999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.050000001},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.045000002},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.035},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.029999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.02},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.015},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.0049999999},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.064999998},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.059999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.050000001},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.045000002},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.035},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.029999999},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.02},
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.015},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.0049999999},
+                                1
+                            }
+                        };
+                    };
                 };
-            };
-        };
-        class TargetACQ_AAM
-        {
-            condition="AAmissile-missilelocked";
-            type="group";
-            class Circle
-            {
-                type="line";
-                width=2.5;
-                points[]=
+                class TargetACQ_AAM
                 {
-
+                    condition="AAmissile-missilelocked";
+                    type="group";
+                    class Circle
                     {
-                        "Target2View",
-                        1,
-
+                        type="line";
+                        width=2.5;
+                        points[]=
                         {
-                            "0 / 8.333",
-                            "-0.248559 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.0434 / 8.333",
-                            "-0.244781 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.125 / 8.333",
-                            "-0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.1607 / 8.333",
-                            "-0.190396 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.2165 / 8.333",
-                            "-0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.234925 / 8.333",
-                            "-0.0850072 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.25 / 8.333",
-                            "0 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.2462 / 8.333",
-                            "0.0431499 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.2165 / 8.333",
-                            "0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.1915 / 8.333",
-                            "0.159774 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.125 / 8.333",
-                            "0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.0855 / 8.333",
-                            "0.233571 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0 / 8.333",
-                            "0.248559 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.0434 / 8.333",
-                            "0.244781 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.125 / 8.333",
-                            "0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.1607 / 8.333",
-                            "0.190396 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.2165 / 8.333",
-                            "0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.234925 / 8.333",
-                            "0.0850072 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.25 / 8.333",
-                            "0 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.2462 / 8.333",
-                            "-0.0431499 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.2165 / 8.333",
-                            "-0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.1915 / 8.333",
-                            "-0.159774 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.125 / 8.333",
-                            "-0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.0855 / 8.333",
-                            "-0.233571 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0 / 4.167",
-                            "-0.248559 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.0434 / 4.167",
-                            "-0.244781 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.125 / 4.167",
-                            "-0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.1607 / 4.167",
-                            "-0.190396 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.2165 / 4.167",
-                            "-0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.234925 / 4.167",
-                            "-0.0850072 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.25 / 4.167",
-                            "0 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.2462 / 4.167",
-                            "0.0431499 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.2165 / 4.167",
-                            "0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.1915 / 4.167",
-                            "0.159774 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.125 / 4.167",
-                            "0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0.0855 / 4.167",
-                            "0.233571 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "0 / 4.167",
-                            "0.248559 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.0434 / 4.167",
-                            "0.244781 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.125 / 4.167",
-                            "0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.1607 / 4.167",
-                            "0.190396 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.2165 / 4.167",
-                            "0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.234925 / 4.167",
-                            "0.0850072 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.25 / 4.167",
-                            "0 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.2462 / 4.167",
-                            "-0.0431499 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.2165 / 4.167",
-                            "-0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.1915 / 4.167",
-                            "-0.159774 / 4.167"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.125 / 4.167",
-                            "-0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        1,
-
-                        {
-                            "-0.0855 / 4.167",
-                            "-0.233571 / 4.167"
-                        },
-                        1
-                    }
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0 / 8.333",
+                                    "-0.248559 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.0434 / 8.333",
+                                    "-0.244781 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.125 / 8.333",
+                                    "-0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.1607 / 8.333",
+                                    "-0.190396 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.2165 / 8.333",
+                                    "-0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.234925 / 8.333",
+                                    "-0.0850072 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.25 / 8.333",
+                                    "0 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.2462 / 8.333",
+                                    "0.0431499 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.2165 / 8.333",
+                                    "0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.1915 / 8.333",
+                                    "0.159774 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.125 / 8.333",
+                                    "0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.0855 / 8.333",
+                                    "0.233571 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0 / 8.333",
+                                    "0.248559 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.0434 / 8.333",
+                                    "0.244781 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.125 / 8.333",
+                                    "0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.1607 / 8.333",
+                                    "0.190396 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.2165 / 8.333",
+                                    "0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.234925 / 8.333",
+                                    "0.0850072 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.25 / 8.333",
+                                    "0 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.2462 / 8.333",
+                                    "-0.0431499 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.2165 / 8.333",
+                                    "-0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.1915 / 8.333",
+                                    "-0.159774 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.125 / 8.333",
+                                    "-0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.0855 / 8.333",
+                                    "-0.233571 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0 / 4.167",
+                                    "-0.248559 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.0434 / 4.167",
+                                    "-0.244781 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.125 / 4.167",
+                                    "-0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.1607 / 4.167",
+                                    "-0.190396 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.2165 / 4.167",
+                                    "-0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.234925 / 4.167",
+                                    "-0.0850072 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.25 / 4.167",
+                                    "0 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.2462 / 4.167",
+                                    "0.0431499 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.2165 / 4.167",
+                                    "0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.1915 / 4.167",
+                                    "0.159774 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.125 / 4.167",
+                                    "0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0.0855 / 4.167",
+                                    "0.233571 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "0 / 4.167",
+                                    "0.248559 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.0434 / 4.167",
+                                    "0.244781 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.125 / 4.167",
+                                    "0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.1607 / 4.167",
+                                    "0.190396 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.2165 / 4.167",
+                                    "0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.234925 / 4.167",
+                                    "0.0850072 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.25 / 4.167",
+                                    "0 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.2462 / 4.167",
+                                    "-0.0431499 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.2165 / 4.167",
+                                    "-0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.1915 / 4.167",
+                                    "-0.159774 / 4.167"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.125 / 4.167",
+                                    "-0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                1,
+                                
+                                {
+                                    "-0.0855 / 4.167",
+                                    "-0.233571 / 4.167"
+                                },
+                                1
+                            }
+                        };
+                    };
                 };
-            };
-        };
-        class AAM_Lock
-        {
-            condition="(missilelocked*AAmissile)";
-            type="group";
-            class LockCircle
-            {
-                type="line";
-                width=2.5;
-                points[]=
+                class AAM_Lock
                 {
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0 / 8.333",
-                            "-0.248559 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0434 / 8.333",
-                            "-0.244781 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0855 / 8.333",
-                            "-0.233571 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.125 / 8.333",
-                            "-0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1607 / 8.333",
-                            "-0.190396 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1915 / 8.333",
-                            "-0.159774 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2165 / 8.333",
-                            "-0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.234925 / 8.333",
-                            "-0.0850072 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2462 / 8.333",
-                            "-0.0431499 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.25 / 8.333",
-                            "0 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2462 / 8.333",
-                            "0.0431499 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.234925 / 8.333",
-                            "0.0850072 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2165 / 8.333",
-                            "0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1915 / 8.333",
-                            "0.159774 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1607 / 8.333",
-                            "0.190396 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.125 / 8.333",
-                            "0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0855 / 8.333",
-                            "0.233571 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0434 / 8.333",
-                            "0.244781 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0 / 8.333",
-                            "0.248559 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0434 / 8.333",
-                            "0.244781 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0855 / 8.333",
-                            "0.233571 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.125 / 8.333",
-                            "0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1607 / 8.333",
-                            "0.190396 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1915 / 8.333",
-                            "0.159774 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2165 / 8.333",
-                            "0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.234925 / 8.333",
-                            "0.0850072 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2462 / 8.333",
-                            "0.0431499 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.25 / 8.333",
-                            "0 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2462 / 8.333",
-                            "-0.0431499 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.234925 / 8.333",
-                            "-0.0850072 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2165 / 8.333",
-                            "-0.12428 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1915 / 8.333",
-                            "-0.159774 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1607 / 8.333",
-                            "-0.190396 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.125 / 8.333",
-                            "-0.215252 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0855 / 8.333",
-                            "-0.233571 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0434 / 8.333",
-                            "-0.244781 / 8.333"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0 / 8.333",
-                            "-0.248559 / 8.333"
-                        },
-                        1
-                    },
-                    {},
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0 / 4.167",
-                            "-0.248559 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0434 / 4.167",
-                            "-0.244781 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0855 / 4.167",
-                            "-0.233571 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.125 / 4.167",
-                            "-0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1607 / 4.167",
-                            "-0.190396 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1915 / 4.167",
-                            "-0.159774 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2165 / 4.167",
-                            "-0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.234925 / 4.167",
-                            "-0.0850072 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2462 / 4.167",
-                            "-0.0431499 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.25 / 4.167",
-                            "0 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2462 / 4.167",
-                            "0.0431499 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.234925 / 4.167",
-                            "0.0850072 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.2165 / 4.167",
-                            "0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1915 / 4.167",
-                            "0.159774 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.1607 / 4.167",
-                            "0.190396 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.125 / 4.167",
-                            "0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0855 / 4.167",
-                            "0.233571 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0.0434 / 4.167",
-                            "0.244781 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0 / 4.167",
-                            "0.248559 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0434 / 4.167",
-                            "0.244781 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0855 / 4.167",
-                            "0.233571 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.125 / 4.167",
-                            "0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1607 / 4.167",
-                            "0.190396 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1915 / 4.167",
-                            "0.159774 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2165 / 4.167",
-                            "0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.234925 / 4.167",
-                            "0.0850072 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2462 / 4.167",
-                            "0.0431499 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.25 / 4.167",
-                            "0 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2462 / 4.167",
-                            "-0.0431499 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.234925 / 4.167",
-                            "-0.0850072 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.2165 / 4.167",
-                            "-0.12428 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1915 / 4.167",
-                            "-0.159774 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.1607 / 4.167",
-                            "-0.190396 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.125 / 4.167",
-                            "-0.215252 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0855 / 4.167",
-                            "-0.233571 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "-0.0434 / 4.167",
-                            "-0.244781 / 4.167"
-                        },
-                        1
-                    },
-
-                    {
-                        "Target2View",
-
-                        {
-                            "0 / 4.167",
-                            "-0.248559 / 4.167"
-                        },
-                        1
-                    }
+                    condition="(missilelocked*AAmissile)";
+                    type="group";
+                    class LockCircle
+                    {
+                        type="line";
+                        width=2.5;
+                        points[]=
+                        {
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0 / 8.333",
+                                    "-0.248559 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0434 / 8.333",
+                                    "-0.244781 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0855 / 8.333",
+                                    "-0.233571 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.125 / 8.333",
+                                    "-0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1607 / 8.333",
+                                    "-0.190396 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1915 / 8.333",
+                                    "-0.159774 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2165 / 8.333",
+                                    "-0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.234925 / 8.333",
+                                    "-0.0850072 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2462 / 8.333",
+                                    "-0.0431499 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.25 / 8.333",
+                                    "0 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2462 / 8.333",
+                                    "0.0431499 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.234925 / 8.333",
+                                    "0.0850072 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2165 / 8.333",
+                                    "0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1915 / 8.333",
+                                    "0.159774 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1607 / 8.333",
+                                    "0.190396 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.125 / 8.333",
+                                    "0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0855 / 8.333",
+                                    "0.233571 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0434 / 8.333",
+                                    "0.244781 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0 / 8.333",
+                                    "0.248559 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0434 / 8.333",
+                                    "0.244781 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0855 / 8.333",
+                                    "0.233571 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.125 / 8.333",
+                                    "0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1607 / 8.333",
+                                    "0.190396 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1915 / 8.333",
+                                    "0.159774 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2165 / 8.333",
+                                    "0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.234925 / 8.333",
+                                    "0.0850072 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2462 / 8.333",
+                                    "0.0431499 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.25 / 8.333",
+                                    "0 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2462 / 8.333",
+                                    "-0.0431499 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.234925 / 8.333",
+                                    "-0.0850072 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2165 / 8.333",
+                                    "-0.12428 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1915 / 8.333",
+                                    "-0.159774 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1607 / 8.333",
+                                    "-0.190396 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.125 / 8.333",
+                                    "-0.215252 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0855 / 8.333",
+                                    "-0.233571 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0434 / 8.333",
+                                    "-0.244781 / 8.333"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0 / 8.333",
+                                    "-0.248559 / 8.333"
+                                },
+                                1
+                            },
+                            {},
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0 / 4.167",
+                                    "-0.248559 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0434 / 4.167",
+                                    "-0.244781 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0855 / 4.167",
+                                    "-0.233571 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.125 / 4.167",
+                                    "-0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1607 / 4.167",
+                                    "-0.190396 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1915 / 4.167",
+                                    "-0.159774 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2165 / 4.167",
+                                    "-0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.234925 / 4.167",
+                                    "-0.0850072 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2462 / 4.167",
+                                    "-0.0431499 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.25 / 4.167",
+                                    "0 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2462 / 4.167",
+                                    "0.0431499 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.234925 / 4.167",
+                                    "0.0850072 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.2165 / 4.167",
+                                    "0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1915 / 4.167",
+                                    "0.159774 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.1607 / 4.167",
+                                    "0.190396 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.125 / 4.167",
+                                    "0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0855 / 4.167",
+                                    "0.233571 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0.0434 / 4.167",
+                                    "0.244781 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0 / 4.167",
+                                    "0.248559 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0434 / 4.167",
+                                    "0.244781 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0855 / 4.167",
+                                    "0.233571 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.125 / 4.167",
+                                    "0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1607 / 4.167",
+                                    "0.190396 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1915 / 4.167",
+                                    "0.159774 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2165 / 4.167",
+                                    "0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.234925 / 4.167",
+                                    "0.0850072 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2462 / 4.167",
+                                    "0.0431499 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.25 / 4.167",
+                                    "0 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2462 / 4.167",
+                                    "-0.0431499 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.234925 / 4.167",
+                                    "-0.0850072 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.2165 / 4.167",
+                                    "-0.12428 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1915 / 4.167",
+                                    "-0.159774 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.1607 / 4.167",
+                                    "-0.190396 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.125 / 4.167",
+                                    "-0.215252 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0855 / 4.167",
+                                    "-0.233571 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "-0.0434 / 4.167",
+                                    "-0.244781 / 4.167"
+                                },
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                
+                                {
+                                    "0 / 4.167",
+                                    "-0.248559 / 4.167"
+                                },
+                                1
+                            }
+                        };
+                    };
                 };
-            };
-        };
-        class AGM_Lock
-        {
-            condition="(missilelocked*ATmissile)";
-            type="group";
-            class LockBox
-            {
-                type="line";
-                width=2;
-                points[]=
+                class AGM_Lock
                 {
-
+                    condition="(missilelocked*ATmissile)";
+                    type="group";
+                    class LockBox
                     {
-                        "Target2View",
-                        {-0.075000003,-0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,-0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {0.075000003,0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,0.075000003},
-                        1
-                    },
-
-                    {
-                        "Target2View",
-                        {-0.075000003,-0.075000003},
-                        1
-                    }
+                        type="line";
+                        width=2;
+                        points[]=
+                        {
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,-0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {0.075000003,0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,0.075000003},
+                                1
+                            },
+                            
+                            {
+                                "Target2View",
+                                {-0.075000003,-0.075000003},
+                                1
+                            }
+                        };
+                    };
                 };
             };
         };
-    };
-};
+        

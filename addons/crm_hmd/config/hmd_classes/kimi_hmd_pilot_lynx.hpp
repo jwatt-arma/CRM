@@ -1,7 +1,8 @@
 // MFD Configs based on work by Kimi and used with permission
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
-class Kimi_HMD_HAD_CPG
+#include "\CRM\crm_hmd\functions\defines.hpp"
+class Kimi_HMD_HAD_Pilot_Lynx
 {
     topLeft="HUD_top_left";
     topRight="HUD_top_right";
@@ -371,7 +372,7 @@ class Kimi_HMD_HAD_CPG
             angle=-50;
         };
     };
-    turret[]={};
+    turret[]={-1};
     class Draw
     {
         color[]=
@@ -381,206 +382,7 @@ class Kimi_HMD_HAD_CPG
             "user5"
         };
         alpha="user6";
-        condition="on*user47-user48";
-        class SpeedNumber_Imperial
-        {
-            type="group";
-            condition="user49";
-            class Speed_Imperial
-            {
-                type="text";
-                align="right";
-                scale=1;
-                source="speed";
-                sourceScale=1.94384;
-                pos[]=
-                {
-                    {0.37,0.79000002},
-                    1
-                };
-                right[]=
-                {
-                    {0.41,0.79000002},
-                    1
-                };
-                down[]=
-                {
-                    {0.37,0.82999998},
-                    1
-                };
-            };
-        };
-        class SpeedNumber_Metric
-        {
-            type="group";
-            condition="1-user49";
-            class Speed_Metric
-            {
-                type="text";
-                align="right";
-                scale=1;
-                source="speed";
-                sourceScale=3.5999999;
-                pos[]=
-                {
-                    {0.37,0.79000002},
-                    1
-                };
-                right[]=
-                {
-                    {0.41,0.79000002},
-                    1
-                };
-                down[]=
-                {
-                    {0.37,0.82999998},
-                    1
-                };
-            };
-        };
-        class AltNumber_Imperial
-        {
-            type="group";
-            condition="user49";
-            class Alt_Imperial
-            {
-                type="text";
-                scale=1;
-                align="right";
-                source="altitudeAGL";
-                sourceScale=3.2808399;
-                sourceOffset=-6;
-                pos[]=
-                {
-                    {0.61000001,0.79000002},
-                    1
-                };
-                right[]=
-                {
-                    {0.64999998,0.79000002},
-                    1
-                };
-                down[]=
-                {
-                    {0.61000001,0.82999998},
-                    1
-                };
-            };
-        };
-        class AltNumber_Metric
-        {
-            type="group";
-            condition="1-user49";
-            class Alt_Metric
-            {
-                type="text";
-                scale=1;
-                align="right";
-                source="altitudeAGL";
-                sourceScale=1;
-                sourceOffset=-2;
-                pos[]=
-                {
-                    {0.61000001,0.79000002},
-                    1
-                };
-                right[]=
-                {
-                    {0.64999998,0.79000002},
-                    1
-                };
-                down[]=
-                {
-                    {0.61000001,0.82999998},
-                    1
-                };
-            };
-        };
-        class Static_HAD_BOX_CPG_Add
-        {
-            clipTL[]={0,1};
-            clipBR[]={1,0};
-            type="line";
-            width=2;
-            points[]=
-            {
-
-                {
-
-                    {
-                        "0.5-0.075",
-                        "0.9-0.040"
-                    },
-                    1
-                },
-
-                {
-
-                    {
-                        "0.5-0.075",
-                        "0.9-0.032"
-                    },
-                    1
-                },
-                {},
-
-                {
-
-                    {
-                        "0.5+0.075",
-                        "0.9-0.040"
-                    },
-                    1
-                },
-
-                {
-
-                    {
-                        "0.5+0.075",
-                        "0.9-0.032"
-                    },
-                    1
-                },
-                {},
-
-                {
-
-                    {
-                        "0.5-0.075",
-                        "0.9+0.040"
-                    },
-                    1
-                },
-
-                {
-
-                    {
-                        "0.5-0.075",
-                        "0.9+0.032"
-                    },
-                    1
-                },
-                {},
-
-                {
-
-                    {
-                        "0.5+0.075",
-                        "0.9+0.040"
-                    },
-                    1
-                },
-
-                {
-
-                    {
-                        "0.5+0.075",
-                        "0.9+0.032"
-                    },
-                    1
-                }
-            };
-        };
+        condition="on*user47";
         class WeaponName
         {
             type="group";
@@ -618,7 +420,7 @@ class Kimi_HMD_HAD_CPG
                 type="text";
                 align="right";
                 source="static";
-                text="CGUN";
+                text="GUN";
                 scale=1;
                 pos[]=
                 {
@@ -661,6 +463,34 @@ class Kimi_HMD_HAD_CPG
                 down[]=
                 {
                     {0.61000001,0.93000001},
+                    1
+                };
+            };
+        };
+        class Laser_Toggle_On
+        {
+            type="group";
+            condition="laseron";
+            class Laser_On
+            {
+                type="text";
+                text="LRFD ON";
+                source="static";
+                align="right";
+                scale=1;
+                pos[]=
+                {
+                    {0.61000001,0.82999998},
+                    1
+                };
+                right[]=
+                {
+                    {0.64999998,0.82999998},
+                    1
+                };
+                down[]=
+                {
+                    {0.61000001,0.87},
                     1
                 };
             };

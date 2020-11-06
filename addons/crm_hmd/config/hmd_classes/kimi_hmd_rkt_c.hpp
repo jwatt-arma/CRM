@@ -1,6 +1,7 @@
 // MFD Configs based on work by Kimi and used with permission
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
+#include "\CRM\crm_hmd\functions\defines.hpp"
 class Kimi_HMD_RKT_C
 {
     topLeft="HUD_top_left";
@@ -392,14 +393,14 @@ class Kimi_HMD_RKT_C
                 width=5.5;
                 points[]=
                 {
-
+                    
                     {
                         "CCIP_2_VIEW",
                         1,
                         {0.022,-0.029999999},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         1,
@@ -407,14 +408,14 @@ class Kimi_HMD_RKT_C
                         1
                     },
                     {},
-
+                    
                     {
                         "CCIP_2_VIEW",
                         1,
                         {0,-0.029999999},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         1,
@@ -422,14 +423,14 @@ class Kimi_HMD_RKT_C
                         1
                     },
                     {},
-
+                    
                     {
                         "CCIP_2_VIEW",
                         1,
                         {0.022,0.029999999},
                         1
                     },
-
+                    
                     {
                         "CCIP_2_VIEW",
                         1,

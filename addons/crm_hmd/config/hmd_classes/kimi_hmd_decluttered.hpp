@@ -1,8 +1,8 @@
 // MFD Configs based on work by Kimi and used with permission
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
-class Kimi_HMD_CPG
-{
+#include "\CRM\crm_hmd\functions\defines.hpp"
+class Kimi_HMD_Decluttered {
     topLeft="HUD_top_left";
     topRight="HUD_top_right";
     bottomLeft="HUD_bottom_left";
@@ -380,80 +380,425 @@ class Kimi_HMD_CPG
             "user5"
         };
         alpha="user6";
-        condition="on*user47-user48";
-        class Aiming_X_Static
-        {
-            type="line";
-            width=5;
-            points[]=
-            {
-
-                {
-                    {0.5,0.47999999},
-                    1
-                },
-
-                {
-                    {0.5,0.44999999},
-                    1
-                },
-                {},
-
-                {
-                    {0.5,0.51999998},
-                    1
-                },
-
-                {
-                    {0.5,0.55000001},
-                    1
-                },
-                {},
-
-                {
-                    {0.47999999,0.5},
-                    1
-                },
-
-                {
-                    {0.44999999,0.5},
-                    1
-                },
-                {},
-
-                {
-                    {0.51999998,0.5},
-                    1
-                },
-
-                {
-                    {0.55000001,0.5},
-                    1
-                }
-            };
-        };
-        class Clock_Text
+        condition="on*user47";
+        class HeadingNumber
         {
             type="text";
-            source="time";
-            text="%X";
-            sourceScale=1;
-            align="right";
             scale=1;
+            source="heading";
+            sourceScale=1;
+            sourceLength=3;
+            align="center";
             pos[]=
             {
-                {0.11,0.175},
+                {0.495,0.045000002},
                 1
             };
             right[]=
             {
-                {0.15000001,0.175},
+                {0.55500001,0.045000002},
                 1
             };
             down[]=
             {
-                {0.11,0.215},
+                
+                {
+                    0.495,
+                    "0.045+ 0.06"
+                },
                 1
+            };
+        };
+        class Airspeed_Number_Imperial
+        {
+            type="group";
+            condition="user49";
+            class Airspeed_Imperial
+            {
+                type="text";
+                align="right";
+                scale=1;
+                source="speed";
+                sourceScale=1.94384;
+                pos[]=
+                {
+                    {0.029999999,0.47499999},
+                    1
+                };
+                right[]=
+                {
+                    {0.079999998,0.47499999},
+                    1
+                };
+                down[]=
+                {
+                    {0.029999999,0.52499998},
+                    1
+                };
+            };
+        };
+        class Airspeed_Number_Metric
+        {
+            type="group";
+            condition="1-user49";
+            class Airspeed_Metric
+            {
+                type="text";
+                align="right";
+                scale=1;
+                source="speed";
+                sourceScale=3.5999999;
+                pos[]=
+                {
+                    {0.029999999,0.47499999},
+                    1
+                };
+                right[]=
+                {
+                    {0.079999998,0.47499999},
+                    1
+                };
+                down[]=
+                {
+                    {0.029999999,0.52499998},
+                    1
+                };
+            };
+        };
+        class AltNumber_Imperial
+        {
+            type="group";
+            condition="user49";
+            class Alt_Imperial
+            {
+                type="text";
+                scale=1;
+                align="right";
+                source="altitudeAGL";
+                sourceScale=3.2808399;
+                sourceOffset=-6;
+                pos[]=
+                {
+                    {0.82999998,0.47499999},
+                    1
+                };
+                right[]=
+                {
+                    {0.88,0.47499999},
+                    1
+                };
+                down[]=
+                {
+                    {0.82999998,0.52499998},
+                    1
+                };
+            };
+        };
+        class AltNumber_Metric
+        {
+            type="group";
+            condition="1-user49";
+            class Alt_Metric
+            {
+                type="text";
+                scale=1;
+                align="right";
+                source="altitudeAGL";
+                sourceScale=1;
+                sourceOffset=-2;
+                pos[]=
+                {
+                    {0.82999998,0.47499999},
+                    1
+                };
+                right[]=
+                {
+                    {0.88,0.47499999},
+                    1
+                };
+                down[]=
+                {
+                    {0.82999998,0.52499998},
+                    1
+                };
+            };
+        };
+        class AC_Centerline
+        {
+            type="line";
+            width=1;
+            points[]=
+            {
+                
+                {
+                    "ForwardVec",
+                    1,
+                    
+                    {
+                        " -0.004 + 0.5",
+                        "0 + 0.5"
+                    },
+                    1
+                },
+                
+                {
+                    "ForwardVec",
+                    1,
+                    
+                    {
+                        " 0.004 + 0.5",
+                        "0 + 0.5"
+                    },
+                    1
+                },
+                {},
+                
+                {
+                    "ForwardVec",
+                    1,
+                    
+                    {
+                        " -0.0 + 0.5",
+                        "0.004 + 0.5"
+                    },
+                    1
+                },
+                
+                {
+                    "ForwardVec",
+                    1,
+                    
+                    {
+                        " 0.0 + 0.5",
+                        "-0.004 + 0.5"
+                    },
+                    1
+                }
+            };
+        };
+        class FPM
+        {
+            type="group";
+            condition="speed - 3.(6*1.852/3.6)+1.94384";
+            class FPM_Cue
+            {
+                type="line";
+                width=5;
+                points[]=
+                {
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0*0.75",
+                            "-0.02*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.0099999998*0.75",
+                            "-0.01732*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.01732*0.75",
+                            "-0.0099999998*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.02*0.75",
+                            "0*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.01732*0.75",
+                            "0.0099999998*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.0099999998*0.75",
+                            "0.01732*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0*0.75",
+                            "0.02*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.0099999998*0.75",
+                            "0.01732*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.01732*0.75",
+                            "0.0099999998*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.02*0.75",
+                            "0*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.01732*0.75",
+                            "-0.0099999998*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.0099999998*0.75",
+                            "-0.01732*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0*0.75",
+                            "-0.02*0.75"
+                        },
+                        1
+                    },
+                    {},
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.039999999*0.75",
+                            "0*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0.02*0.75",
+                            "0*0.75"
+                        },
+                        1
+                    },
+                    {},
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.039999999*0.75",
+                            "0*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "-0.02*0.75",
+                            "0*0.75"
+                        },
+                        1
+                    },
+                    {},
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0*0.75",
+                            "-0.039999999*0.75"
+                        },
+                        1
+                    },
+                    
+                    {
+                        "Velocity",
+                        1,
+                        
+                        {
+                            "0*0.75",
+                            "-0.02*0.75"
+                        },
+                        1
+                    }
+                };
             };
         };
         class WYPT_Group
@@ -463,150 +808,149 @@ class Kimi_HMD_CPG
             class WYPT_Block
             {
                 type="group";
-                condition="speed - (6*1.852/3.6)+1.94384";
                 class WYPT_Fly_2_Cue
                 {
                     type="line";
                     width=3;
                     points[]=
                     {
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0 * 0.075",
                                 "-0.02 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0.0099999998 * 0.075",
                                 "-0.01732 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0.01732 * 0.075",
                                 "-0.0099999998 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0.02 * 0.075",
                                 "0 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0.01732 * 0.075",
                                 "0.0099999998 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0.0099999998 * 0.075",
                                 "0.01732 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0 * 0.075",
                                 "0.02 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "-0.0099999998 * 0.075",
                                 "0.01732 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "-0.01732 * 0.075",
                                 "0.0099999998 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "-0.02 * 0.075",
                                 "0 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "-0.01732 * 0.075",
                                 "-0.0099999998 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "-0.0099999998 * 0.075",
                                 "-0.01732 * 0.075"
                             },
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
-
+                            
                             {
                                 "0 * 0.075",
                                 "-0.02 * 0.075"
@@ -614,42 +958,42 @@ class Kimi_HMD_CPG
                             1
                         },
                         {},
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
                             {-0.029999999,0},
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
                             {0,-0.029999999},
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
                             {0.029999999,0},
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
                             {0.017999999,0.015},
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
                             {-0.017999999,0.015},
                             1
                         },
-
+                        
                         {
                             "WYPT_2_VIEW",
                             1,
@@ -657,6 +1001,62 @@ class Kimi_HMD_CPG
                             1
                         }
                     };
+                };
+            };
+        };
+        class Cruise_Altitude_ASL_Imperial
+        {
+            type="group";
+            condition="user49";
+            class Cruise_Alt_Imperial
+            {
+                type="text";
+                source="altitudeASL";
+                sourceScale=3.2808399;
+                align="right";
+                scale=1;
+                pos[]=
+                {
+                    {0.82999998,0.18000001},
+                    1
+                };
+                right[]=
+                {
+                    {0.88,0.18000001},
+                    1
+                };
+                down[]=
+                {
+                    {0.82999998,0.23},
+                    1
+                };
+            };
+        };
+        class Cruise_Altitude_ASL_Metric
+        {
+            type="group";
+            condition="1-user49";
+            class Cruise_Alt_Metric
+            {
+                type="text";
+                source="altitudeASL";
+                sourceScale=1;
+                align="right";
+                scale=1;
+                pos[]=
+                {
+                    {0.82999998,0.18000001},
+                    1
+                };
+                right[]=
+                {
+                    {0.88,0.18000001},
+                    1
+                };
+                down[]=
+                {
+                    {0.82999998,0.23},
+                    1
                 };
             };
         };
