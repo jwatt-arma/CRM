@@ -2,7 +2,9 @@
 // https://steamcommunity.com/sharedfiles/filedetails/?id=312724602
 
 #include "\CRM\crm_hmd\functions\defines.hpp"
-#define MFD_USER_REF(NUM) user##NUM
+#include "\z\ace\addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
+
 class Kimi_HMD_Common
 {
     topLeft="HUD_top_left";
@@ -378,16 +380,16 @@ class Kimi_HMD_Common
     {
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
-        condition="on*user47-user48";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA)) ;
+        condition= QUOTE(on * MFD_USER_VAR(MFD_USER_ON) - MFD_USER_VAR(MFD_USER_FULL)) ;
         class Units_Text_Imperial
         {
             type="group";
-            condition="user49";
+            condition=QUOTE(MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Units_Metric
             {
                 type="text";
@@ -415,7 +417,7 @@ class Kimi_HMD_Common
         class Units_Text_Metric
         {
             type="group";
-            condition="1-user49";
+            condition=QUOTE(1-MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Units_Metric
             {
                 type="text";

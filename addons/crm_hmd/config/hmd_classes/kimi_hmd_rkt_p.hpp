@@ -377,12 +377,12 @@ class Kimi_HMD_RKT_P
     {
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
-        condition="on*user47";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA));
+        condition=QUOTE(on*MFD_USER_VAR(MFD_USER_ON));
         class Rocket_I_LLW
         {
             condition="rocket";

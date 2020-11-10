@@ -377,16 +377,16 @@ class Kimi_HMD_Weapons
     {
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
-        condition="on*user47";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA));
+        condition=QUOTE(on*MFD_USER_VAR(MFD_USER_ON));
         class Turret_Tape_Symbol
         {
             type="group";
-            condition="1-user48";
+            condition=QUOTE(1-MFD_USER_VAR(MFD_USER_FULL));
             class Turret_Tape_Triangle
             {
                 type="polygon";

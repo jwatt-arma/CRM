@@ -375,14 +375,14 @@ class Kimi_HMD_Pilot
     turret[]={-1};
     class Draw
     {
-        condition="on*user47-user48";
+        condition=QUOTE(on*MFD_USER_VAR(MFD_USER_ON)-MFD_USER_VAR(MFD_USER_FULL));
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA));
         class Aiming_X_Static
         {
             type="group";
@@ -442,7 +442,7 @@ class Kimi_HMD_Pilot
         class Slip_ball_group
         {
             type="group";
-            condition="1-user48";
+            condition=QUOTE(1-MFD_USER_VAR(MFD_USER_FULL));
             class Slip_bars
             {
                 type="line";

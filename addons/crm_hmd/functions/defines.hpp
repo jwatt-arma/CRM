@@ -1,3 +1,6 @@
-#define MFD_USER_ON 47 // was user0
-#define MFD_USER_FULL 48 // was user48
-#define MFD_USER_IMPERIAL 49 // was user49
+#define MFD_USER_YELLOW 45
+#define MFD_USER_ALPHA 46
+#define MFD_USER_ON 47
+#define MFD_USER_FULL 48
+#define MFD_USER_IMPERIAL 49
+#define MFD_USER_VAR(num) user##num

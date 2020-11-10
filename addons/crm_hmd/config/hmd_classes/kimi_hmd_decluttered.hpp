@@ -375,12 +375,12 @@ class Kimi_HMD_Decluttered {
     {
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
-        condition="on*user47";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA));
+        condition=QUOTE(on*MFD_USER_VAR(MFD_USER_ON));
         class HeadingNumber
         {
             type="text";
@@ -412,7 +412,7 @@ class Kimi_HMD_Decluttered {
         class Airspeed_Number_Imperial
         {
             type="group";
-            condition="user49";
+            condition=QUOTE(MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Airspeed_Imperial
             {
                 type="text";
@@ -440,7 +440,7 @@ class Kimi_HMD_Decluttered {
         class Airspeed_Number_Metric
         {
             type="group";
-            condition="1-user49";
+            condition=QUOTE(1-MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Airspeed_Metric
             {
                 type="text";
@@ -468,7 +468,7 @@ class Kimi_HMD_Decluttered {
         class AltNumber_Imperial
         {
             type="group";
-            condition="user49";
+            condition=QUOTE(MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Alt_Imperial
             {
                 type="text";
@@ -497,7 +497,7 @@ class Kimi_HMD_Decluttered {
         class AltNumber_Metric
         {
             type="group";
-            condition="1-user49";
+            condition=QUOTE(1-MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Alt_Metric
             {
                 type="text";
@@ -1007,7 +1007,7 @@ class Kimi_HMD_Decluttered {
         class Cruise_Altitude_ASL_Imperial
         {
             type="group";
-            condition="user49";
+            condition=QUOTE(MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Cruise_Alt_Imperial
             {
                 type="text";
@@ -1035,7 +1035,7 @@ class Kimi_HMD_Decluttered {
         class Cruise_Altitude_ASL_Metric
         {
             type="group";
-            condition="1-user49";
+            condition=QUOTE(1-MFD_USER_VAR(MFD_USER_IMPERIAL));
             class Cruise_Alt_Metric
             {
                 type="text";

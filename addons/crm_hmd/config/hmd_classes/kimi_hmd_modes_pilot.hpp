@@ -376,12 +376,12 @@ class Kimi_HMD_Modes_Pilot
     {
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
-        condition="on*user47-user48";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA));
+        condition=QUOTE(on*MFD_USER_VAR(MFD_USER_ON)-MFD_USER_VAR(MFD_USER_FULL));
         class WYPT_Group
         {
             type="group";
@@ -486,7 +486,7 @@ class Kimi_HMD_Modes_Pilot
                 class Ground_Speed_M
                 {
                     type="group";
-                    condition="1-user49";
+                    condition=QUOTE(1-MFD_USER_VAR(MFD_USER_IMPERIAL));
                     class GS_M
                     {
                         type="text";
@@ -514,7 +514,7 @@ class Kimi_HMD_Modes_Pilot
                 class Ground_Speed_I
                 {
                     type="group";
-                    condition="user49";
+                    condition=QUOTE(MFD_USER_VAR(MFD_USER_IMPERIAL));
                     class GS_I
                     {
                         type="text";

@@ -25,12 +25,12 @@ class Kimi_HMD_HAD_Pilot_Lynx_2
     {
         color[]=
         {
-            "user3",
-            "user4",
-            "user5"
+            QUOTE(MFD_USER_VAR(MFD_USER_YELLOW)),
+            "1",
+            "0"
         };
-        alpha="user6";
-        condition="on*user47";
+        alpha=QUOTE(MFD_USER_VAR(MFD_USER_ALPHA));
+        condition=QUOTE(on*MFD_USER_VAR(MFD_USER_ON));
         class Laser_Toggle_On
         {
             type="group";
