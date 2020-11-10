@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class crm_common
+	class crm_take_control
 	{
 		units[]				 = {};
 		weapons[]			 = {};

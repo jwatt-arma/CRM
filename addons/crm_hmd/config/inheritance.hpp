@@ -1,1 +1,0 @@
-class ACE_SelfActions;

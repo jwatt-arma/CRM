@@ -1,7 +1,8 @@
 class cfgVehicles {
-	class Air {
+	class AllVehicles;
+	class Air: AllVehicles {
 		class ACE_SelfActions;
-	}
+	};
 	class Helicopter: Air {	
         class ACE_SelfActions: ACE_SelfActions {
 			class waypoints {

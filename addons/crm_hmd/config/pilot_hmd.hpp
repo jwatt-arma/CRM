@@ -1,5 +1,5 @@
 
-class MFD {
+class MFD: MFD {
 	#include "\CRM\crm_hmd\config\hmd_classes\kimi_airplane_hud.hpp"
 	#include "\CRM\crm_hmd\config\hmd_classes\kimi_hmd_common.hpp"
 	#include "\CRM\crm_hmd\config\hmd_classes\kimi_hmd_decluttered.hpp"
