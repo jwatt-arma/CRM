@@ -2,7 +2,7 @@
 
 ## Overview:
 
-Crew Resource Management in Arma 3 mod dedicated to improving the experience of operating multi-crew aircraft. This mod supports the following features:
+Crew Resource Management is an Arma 3 mod dedicated to improving the experience of operating multi-crew aircraft. This mod supports the following features:
 - Improved control handoff
 - Autopilot
 - Waypoint management
