@@ -538,7 +538,7 @@ class Kimi_HMD_Weapons
         class Gunner_AIM
         {
             type="group";
-            condition="(1-mgun)*(2-(abs(cameraHeadingDiffY)<=3)-(abs(cameraHeadingDiffX)<=3))*(1-(abs(weaponHeading-HEADING)<=3))";
+            condition="1";
             class CPG_X_Group
             {
                 type="group";

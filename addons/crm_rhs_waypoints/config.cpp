@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class crm_rhs
+	class crm_rhs_waypoints
 	{
 		units[] = {};
 		weapons[] = {};

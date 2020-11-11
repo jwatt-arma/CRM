@@ -1,9 +1,11 @@
 class cfgVehicles {
-	class AllVehicles;
-	class Air: AllVehicles {
+	//class AllVehicles;
+	class Air;
+	class Helicopter : Air {
 		class ACE_SelfActions;
 	};
-	class Helicopter: Air {	
+	class Helicopter_Base_F : Helicopter {	
+		foo = 1;
         class ACE_SelfActions: ACE_SelfActions {
 			class waypoints {
 				displayName = "Waypoints";
