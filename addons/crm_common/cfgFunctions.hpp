@@ -4,6 +4,9 @@ class CfgFunctions {
       class isPilot {
         file = "crm_common\functions\isPilot.sqf";
       };
+      class isPilotOf {
+        file = "crm_common\functions\isPilotOf.sqf";
+      };
       class isCopilot {
         file = "crm_common\functions\isCopilot.sqf";
       };

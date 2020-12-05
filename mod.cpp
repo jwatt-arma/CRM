@@ -1,8 +1,8 @@
 name = "Crew Resource Management";
 picture = "crm.paa";
 actionName = "GitHub";
-action = "https://github.com/acemod/ACE3";
-description = "CRM - Version 1.0.0";
+action = "https://github.com/jwatt-arma/CRM";
+description = "CRM - Version 1.0.1";
 logo = "crm.paa";
 logoOver = "crm.paa";
 tooltip = "CRM";

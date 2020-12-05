@@ -11,7 +11,7 @@ _drawHandler = [{
 
 //Broadcast target position of IR Pointer
 _setVarsHandler = [{ _this call crm_ir_pointer_fnc_onEachFrameVarsHandler;
-}, 0.1, _vehicle] call CBA_fnc_addPerFrameHandler;
+}, 0.3, _vehicle] call CBA_fnc_addPerFrameHandler;
 
 // Remove the per frame handlers if vehicle is killed
 // _vehicle addEventHandler ["Killed", {

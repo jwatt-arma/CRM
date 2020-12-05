@@ -6,6 +6,5 @@ _isInVehicle = (vehicle player) == _vehicle;
 _autohoverCapable = [_vehicle] call crm_autohover_fnc_isAutohoverCapable;
 _autohoverOn = [_vehicle] call crm_autohover_fnc_isAutohoverOn;
 if (_isInVehicle && _isPilot && _autohoverOn && _autohoverCapable) then {
-	hint 'foo';
 	[_vehicle] call crm_autohover_fnc_setAutohoverCollective;
 };

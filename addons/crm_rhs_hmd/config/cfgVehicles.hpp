@@ -41,4 +41,8 @@ class CfgVehicles {
 		#include "\CRM\crm_hmd\config\hmd.hpp"
 	};
 
+	class vtx_H60_base: Heli_Transport_01_base_F {
+		#include "\CRM\crm_hmd\config\hmd.hpp"
+	};
+
 };

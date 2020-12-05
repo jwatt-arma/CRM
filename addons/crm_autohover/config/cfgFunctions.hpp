@@ -7,8 +7,14 @@ class CfgFunctions {
       class setAutohover {
         file = "\CRM\crm_autohover\functions\setAutohover.sqf";
       };
+      class setAltHold {
+        file = "\CRM\crm_autohover\functions\setAltHold.sqf";
+      };
       class toggleAutohover {
         file = "\CRM\crm_autohover\functions\toggleAutohover.sqf";
+      };
+      class toggleAltHold {
+        file = "\CRM\crm_autohover\functions\toggleAltHold.sqf";
       };
       class isAutohoverOn {
         file = "\CRM\crm_autohover\functions\isAutohoverOn.sqf";
