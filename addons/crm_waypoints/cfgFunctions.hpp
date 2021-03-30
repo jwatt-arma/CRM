@@ -13,6 +13,10 @@ class CfgFunctions {
       class clearWaypoints {
         file = "\CRM\crm_waypoints\functions\clearWaypoints.sqf";
       };
+      class postInit {
+        file = "\CRM\crm_waypoints\functions\init.sqf";
+        postInit = 1;
+      };
     };
   };
 };
